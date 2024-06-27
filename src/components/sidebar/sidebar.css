@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed; /* Fixed positioning */
+  top: -100vh; /* Hide sidebar above the viewport initially */
+  left: 0;
+  width: 100%; /* Full width on mobile */
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f9;
+  padding: 25px 15px;
+  transition: top 0.3s ease; /* Smooth transition */
+  z-index: 1000; /* Ensure it is on top */
+  overflow: hidden; /* Prevent scrolling within the sidebar */
+}
+
+.sidebar img {
+  width: 20px;
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sidebar .newchat {
+  margin-top: 10px;
+  display: flex; /* Use flex to align items horizontally */
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar .recent-entry {
+  display: flex; /* Use flex to align items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #e2e6eb;
+}
+
+.sidebar .bottom-item {
+  display: flex; /* Use flex to align items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+}
+
+@media (min-width: 601px) {
+  .sidebar {
+      position: relative;
+      top: 0;
+      width: auto;
+      height: 100vh;
+      padding: 25px 15px;
+      z-index: 1;
+  }
+}
